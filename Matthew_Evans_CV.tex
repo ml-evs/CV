@@ -1,0 +1,120 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\usepackage{libertine}
+\usepackage[scaled=0.9]{inconsolata}
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\definecolor{color2}{RGB}{12, 69, 129}
+%\definecolor{color2}{RGB}{56,115,178}
+%\usepackage{doi}
+\usepackage{natbib}
+\newcommand\colourhref[3][color2]{\href{#2}{\color{#1}#3}}
+\newcommand{\doi}[1]{DOI: \colourhref{https://dx.doi.org/#1}{#1}}
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\makecvtitle}% <cmd>
+  {\httplink{\@homepage}}% <search>
+  {{\ifx\@homepage@shorthand\relax
+     \httplink{\@homepage}% Used \homepage{<URL>}
+   \else
+     \httplink[\@homepage@shorthand]{\@homepage}% Used \homepage[<desc>]{<URL>}
+   \fi}}% <replace>
+  {}{}% <succes><failure>
+\patchcmd{\thebibliography}
+{\advance\leftmargin\labelsep}
+  {\labelsep=0.7cm \advance\leftmargin\labelsep}{}{}
+\RenewDocumentCommand{\homepage}{o m}{%
+  \let\@homepage@shorthand\relax%
+  \providecommand\@homepage{#2}%
+  \IfNoValueF{#1}{\def\@homepage@shorthand{#1}}%
+}
+\makeatother
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{12cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Matthew}{Evans}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\email{me388@cam.ac.uk}                               % optional, remove / comment the line if not wanted
+\homepage[www.tcm.phy.cam.ac.uk/\textasciitilde me388]{www.tcm.phy.cam.ac.uk/~me388/}
+\social[github]{ml-evs}                           % optional, remove / comment the line if not wanted
+\quote{ab initio calculations \textbullet\, energy storage applications\\ crystal structure databases \textbullet\, software development}
+
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\section{Education}
+\cventry{2016--2019}{PhD Physics}{}{University of Cambridge}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2015--2016}{MPhil Scientific Computing}{}{University of Cambridge}{\textit{Distinction}}{}  % arguments 3 to 6 can be left empty
+\cventry{2011--2015}{MPhys Physics with Theoretical Physics}{}{University of Manchester}{\textit{First Class (Hons)}}{}
+
+\section{Research interests \& Experience}
+\cvitem{PhD}{\textbf{Crystal structure prediction for energy storage applications}}
+\cvitem{}{with Dr Andrew Morris}
+\cvitem{}{Discovery and computational characterisation of novel high-capacity anode materials for Li and Na-ion batteries, using \emph{ab initio} random structure searching (AIRSS).}
+
+\cvitem{MPhil}{\textbf{High-throughput \emph{ab initio} materials discovery}}
+\cvitem{}{with Dr Andrew Morris}
+\cvitem{}{Database approaches to materials design; wrote a software package, \colourhref{http://www.tcm.phy.cam.ac.uk/~me388/matador_docs/}{\texttt{MATADOR}}, to aggregate and analyse the results of first-principles calculations.}
+
+\cvitem{MPhys}{\textbf{Electronic structure of defects of graphene superlattices}}
+\cvitem{}{with Prof Francisco Guinea}
+\cvitem{}{Nearly-free electron model of graphene/h-BN superlattices with arbitrary defects included via Green's function  methods. Awarded Tessella Prize for development of a high-performance Python code to perform the computation and analysis.}
+
+\cvitem{UG}{\textbf{Interactions of quantised vortices in superfluid helium}}
+\cvitem{}{with Dr Paul Walmsley \& Prof Andrei Golov \emph{(University of Manchester)}}
+\cvitem{}{Spent two summers developing \colourhref{https://github.com/ml-evs/vfmcpp}{\texttt{vfmcpp}}, a C++/OpenMP implementation of the vortex filament model of superfluid helium, to study microscopic vortex dynamics and reconnection events \cite{PhysRevFluids.1.044502}. }
+
+\cvitem{UG}{\textbf{Hard sphere packing of nanotube-encapsulated fullerenes}}
+\cvitem{}{with Dr Ho-Kei Chan \& Prof Elena Besley \emph{(University of Nottingham)}}
+\cvitem{}{Application of a novel hard sphere packing regime to study CNT-encapsulated C$_{60}$ molecules.}
+
+
+
+\section{Teaching Experience}
+\cvitem{2016--2017}{Supervisor: Part IB Electromagnetism, Dynamics and Thermodynamics, \emph{(Selwyn College)}.}
+\cvitem{2016--2017}{Demonstrator: Part IB \& II Computational Physics (C++), \emph{(Cavendish Laboratory)}.}
+\cvitem{2016--2017}{Volunteer: Key Stage 2 Code Club \emph{(Ridgefield Primary School, Cambridge)}.}
+\cvitem{2016}{Demonstrator: Graduate-level Electronic Structure, \emph{(Cavendish Laboratory)}.}
+\cvitem{2016}{Demonstrator: CASTEP Workshop \emph{(Oxford)}, HPC Autumn Academy \emph{(Cambridge)}.}
+\cvitem{2012--2015}{Tutor: GCSE Maths \& Key Stage 2 Programming for \colourhref{http://thetutortrust.org/}{The Tutor Trust}, \emph{(Manchester)}.
+\begin{itemize}
+    \item[--] Provided tuition to small groups and `looked after children' across 15 schools.
+\item[--] Helped lead a successful pilot to teach primary school children programming using Scratch.\end{itemize}
+}
+
+\section{Computing}
+\cvdoubleitem{Languages}{Python, C++, Fortran}{Databases}{MongoDB, SQL}
+\cvdoubleitem{Computation}{CASTEP, Quantum Espresso}{Packages}{NumPy, spglib, Jupyter}
+\cvdoubleitem{Platforms}{Linux, *nix}{HPC Facilities}{ARCHER (UK), Darwin (Cambridge)}
+\cvdoubleitem{Software}{\LaTeX, Inkscape, GIMP}{Utilities}{git, shell scripting, GNU toolchain}
+\cvdoubleitem{Data viz}{matplotlib, Bokeh, d3.js}{Web}{JavaScript, HTML, CSS}
+
+\section{Conferences \& Presentations}
+\cvitem{2016}{High Performance Computing Autumn Academy, Presenter, University of Cambridge}
+\cvitem{2016}{SMARTER5, Poster Presentation, University of Bayreuth, Germany}
+\cvitem{2016}{CASTEP Workshop, Poster Presentation, University of Oxford}
+\cvitem{2016}{CCP9 Young Researchers Event, Poster Presentation, University of York}
+\cvitem{2015}{High Performance Computing Autumn Academy, Attendee, University of Cambridge}
+\cvitem{2015}{CASTEP Workshop, Attendee, University of Oxford}
+
+%\section{Referees}
+%\cvitem{}{Dr Andrew Morris; \colourhref{mailto:ajm255@cam.ac.uk}{ajm255@cam.ac.uk}}
+%\cvitem{}{Prof Francisco Guinea; \colourhref{mailto:paco.guinea@icm.csic.es}{paco.guinea@icm.csic.es}}
+%\cvitem{}{Dr Paul Walmsley; \colourhref{mailto:paul.walmsley@manchester.ac.uk}{paul.walmsley@manchester.ac.uk}}
+
+\nocite{*}
+\bibliographystyle{plain}
+\raggedright\bibliography{pubs}
+
+\clearpage
+\end{document}
