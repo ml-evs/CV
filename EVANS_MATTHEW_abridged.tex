@@ -1,0 +1,198 @@
+\documentclass[11pt,a4paper]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'         
+%\definecolor{color1}{RGB}{63,46,148}
+\definecolor{color2}{RGB}{19,33,156}
+\definecolor{color1}{RGB}{0,0,0}
+\usepackage{filecontents}
+%\usepackage{hyperref}
+\usepackage[sort&compress, numbers]{natbib}
+\newcommand{\doi}[1]{doi: \url{#1}}
+\urlstyle{same}
+\begin{filecontents}{\jobname.bib}
+
+@article{PhysRevFluids.1.044502,
+  title = {Interactions between unidirectional quantized vortex rings},
+  author = {Zhu, T. and \textbf{Evans}, \textbf{M. L.} and Brown, R. A. and Walmsley, P. M. and Golov, A. I.},
+  journal = {Phys. Rev. Fluids},
+  volume = {1},
+  issue = {4},
+  pages = {044502},
+  numpages = {18},
+  year = {2016},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevFluids.1.044502},
+  eprint = {http://arxiv.org/abs/1603.04313v2}
+  url = {http://link.aps.org/doi/10.1103/PhysRevFluids.1.044502}
+}
+\end{filecontents}
+
+%\definecolor{color2}{RGB}{0,0,0}
+\renewcommand*{\cventry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {\bfseries\small#3}%
+%   \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% I changed this line (with comma) ...
+    \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% ... into this one (without comma).
+    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#6}{}}{}{, #6}%
+    \strut%
+    \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+%%%
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\makecvtitle}% <cmd>
+  {\httplink{\@homepage}}% <search>
+  {{\ifx\@homepage@shorthand\relax
+     \httplink{\@homepage}% Used \homepage{<URL>}
+   \else
+     \httplink[\@homepage@shorthand]{\@homepage}% Used \homepage[<desc>]{<URL>}
+   \fi}}% <replace>
+  {}{}% <succes><failure>
+
+\RenewDocumentCommand{\homepage}{o m}{%
+  \let\@homepage@shorthand\relax%
+  \providecommand\@homepage{#2}%
+  \IfNoValueF{#1}{\def\@homepage@shorthand{#1}}%
+}
+\makeatother
+
+
+\definecolor{color0}{RGB}{0,0,0}
+\usepackage{setspace}                 % color options 'blue' (default), 'orange', 'green', 
+\PassOptionsToPackage{pdfpagelabels=false, colorlinks, urlcolor={color2}}{hyperref} 
+%\hypersetup{colorlinks, linkcolor={black}, urlcolor={color2}}
+% 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\newcommand\Colorhref[3][color2]{\href{#2}{\color{#1}#3}}
+\usepackage[normalem]{ulem}
+% character encoding
+%\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\renewcommand{\labelitemi}{\textasteriskcentered}
+\renewcommand{\refname}{\textsc{\Large{Publications}}}
+% adjust the page margins
+\usepackage[margin=0.5in, bottom=0.5in]{geometry}
+\usepackage{parskip}
+\addtolength{\parskip}{\baselineskip} %\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{12cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\newcommand\Mycventry[6]{%
+  \cventry{#1}{#2}{#3}{#4}{#5}{\fontsize{12}{12}#6}}
+
+\usepackage{inconsolata}
+\usepackage{libertine}
+%\usepackage[charter]{mathdesign}
+
+\renewcommand{\sfdefault}{\rmdefault}
+% personal data
+\firstname{Matthew}
+\familyname{Evans}
+%\title{\normalsize{\href{mailto:matthew.evans-4@student.manchester.ac.uk}{matthew.evans-4@student.manchester.ac.uk}}}                         % optional, remove / comment the line if not wanted
+%\address{12 Hall Road, Rusholme}{Manchester, M14 5HL}    % optional, remove / comment the line if not wanted
+\mobile{+44 7846 838 198}                     % optional, remove / comment the line if not wanted
+\homepage[www.tcm.phy.cam.ac.uk/\textasciitilde me388]{www.tcm.phy.cam.ac.uk/~me388/}
+\social[github]{ml-evs}
+\social[orcid]{0000-0002-1182-9098}
+\email{me388@cam.ac.uk}                          % optional, remove / comment the line if not wanted
+                  % optional, remove / comment the line if not wanted
+% optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                  % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                            % optional, remove / comment the line if not wanted
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+\vspace{-0.50in}
+\section{\textsc{\Large{Education}}}
+%\vspace{-0.2in}
+\cventry{2016--2019}{\emph{PhD} in Physics}{Theory of Condensed Matter Group, University of Cambridge}{Supervisor: Dr A. Morris}{}{}{}
+\cventry{2015--2016}{\emph{MPhil} Scientific Computing (Distinction)}{Laboratory for Scientific Computing, University of Cambridge}{}{}{
+Undertaken as a member of the CDT for Computational Methods in Materials Science. Courses on electronic structure, atomistic simulation, numerical analysis and training in C++, Fortran, MPI, CUDA and OpenMP.}
+\cventry{2011--2015}{\emph{MPhys} Physics with Theoretical Physics (Hons 1st class)}{University of Manchester}{}{}{
+Graduate-level include condensed matter physics, semiconductor device physics, quantum (gauge) field theories, superconductivity, statistical physics, and nuclear physics, as well as programming courses in C++. }
+%\cventry{2004--2011}{Wisbech Grammar School}{}{}{}{
+%A-level: Physics (\textbf{A*}), Chemistry (\textbf{A*}), Maths (\textbf{A})
+%including AS-level Further Maths (A) and Economics (A).}
+\vspace{-0.1in}
+\section{\textsc{\Large{Research Experience}}}
+\cventry{2016}{MPhil project}{Laboratory for Scientific Computing, University of Cambridge}{Supervisor: Dr A. Morris}{}{
+"Towards a high-throughput framework for \emph{ab initio} materials discovery." A combined approach of \emph{ab initio} random structure searching and materials databases to study lithium-ion battery anodes. Awarded a distinction.
+}
+\cventry{2014--2015}{MPhys project}{Condensed Matter Theory, University of Manchester}{Supervisor: Prof F. Guinea.}{}{
+"Electronic structure of defects in graphene superlattices." Awarded the Tessella Prize for the development of high-performance Python code to perform the computation and analysis. 
+}
+\cventry{2014, 2015}{Research placement}{Computational Physics, University of Manchester}{Supervisor: Dr P. Walmsley}{}{
+Two summers working on the simulation of microscopic vortex dynamics in superfluid helium. A parallel code, vfmcpp, was developed in C++ to study reconnection events under the vortex filament model (\Colorhref{www.github.com/charmedxi/vfmcpp}{GitHub}). Funding from EPSRC.}
+
+\cventry{2013--2014}{Research placement}{Computational Nanoscience, University of Nottingham}{Supervisor: Prof E. Besley}{}{
+Research consisted of applying a novel hard sphere packing regime to study the energetics of nanotube-encapsulated C$_{60}$ molecules, funded by the EPSRC.
+}
+\vspace{-0.1in}
+%\section{\textsc{\Large{Employment}}}
+%\cventry{2012--2015}{Maths and Coding Tutor}{\Colorhref{http://thetutortrust.org/}{\textit{The Tutor Trust}}}{}{}{
+%Provided GCSE maths tuition to small groups and `looked after children' in nearly 15 disadvantaged schools around Manchester. Lead a group of tutors in a six-week pilot to teach programming, logical reasoning and algorithmics to primary school children using Scratch. 
+%}
+%\vspace{-0.1in}
+\section{\textsc{\Large{Teaching}}}
+\cventry{\textnormal{2016--}}{\textnormal{Small group teaching: Part IB Electromagnetism, Dynamics and Thermodynamics (Cambridge).}}{}{}{}{}\vspace{-0.05in}
+\cventry{\textnormal{2016--}}{\textnormal{Demonstration: Part IB \& II Computational Physics (C++) and graduate-level Electronic Structure (Cambridge).}}{}{}{}{}\vspace{-0.05in}
+\cventry{\textnormal{2016--}}{\textnormal{Volunteering: KS1 Code Club, Ridgefield Primary School (Cambridge).}}{}{}{}{}\vspace{-0.05in}
+%\cventry{\textnormal{2016}}{\textnormal{Demonstration: graduate-level Electronic Structure (Cambridge).}}{}{}{}{}\vspace{-0.05in}
+%\cventry{\textnormal{2016}}{\textnormal{Demonstration: graduate-level Electronic Structure (Cambridge).}}{}{}{}{}\vspace{-0.05in}
+\cventry{2016}{\textnormal{Demonstration: CASTEP Workshop 2016 (Oxford), High Performance Computing Autumn Academy (Cambridge)}}{}{}{}{}\vspace{-0.05in}
+\cventry{2012--2015}{\textnormal{Tutoring: GCSE Maths and KS1 Programming, for the charity \Colorhref{http://thetutortrust.org/}{The Tutor Trust} (Manchester).}}{}{}{}{}
+\vspace{-0.1in}
+%\vspace{-0.1in}
+%\section{\textsc{\Large{Awards}}}
+%\cventry{\textnormal{2015}}{\textnormal{Tessella Prize for best use of software in MPhys project, \pounds125.}}{}{}{}{}\vspace{-0.05in}
+%\cventry{\textnormal{2013--2014}}{\textnormal{Two EPSRC Undergraduate Research Scholarships, totalling \pounds4000.}}{}{}{}{}\vspace{-0.05in}
+%\cventry{\textnormal{2011--2015}}{\textnormal{University of Manchester Scholarship, worth \pounds12000.}}{}{}{}{}\vspace{-0.05in}
+%\cventry{2011}{\textnormal{Kenneth Neale Memorial Prize for Physics, Wisbech Grammar School, worth \pounds20 at WHSmiths.}}{}{}{}{}
+\section{\textsc{\Large{Skills}}}
+\vspace{-0.2in}
+\cventry{}{}{}{}{}{
+\vspace{-0.3in}
+\begin{itemize}
+\item Languages: Python (advanced), C++, FORTRAN (intermediate), Rust (basic). 
+\item Software: CASTEP (advanced), MongoDB (intermediate) and Quantum Espresso (intermediate).
+\item Tools and packages: Linux (advanced), \LaTeX, NumPy, matplotlib, Bokeh.
+%\item Daily use of software carpentry tools: version control, GNU/Intel development toolchains, shell scripting etc. 
+%\item Extensive experience typesetting with \LaTeX, graphics with matplotlib and Inkscape.
+%\item I run a popular (30k hits) website where I host my lecture notes, used as course material by some lecturers.
+%\item Interested in outreach and science policy, I have given public talks on my research.
+%\item 15 years experience as a CB in both 11 and 6-a-side football, most recently for Selwyn College.
+\end{itemize}
+}
+\vspace{-0.1in}
+\section{\textsc{\Large{Conferences and Presentations}}}
+\vspace{-0.2in}
+\cventry{}{}{}{}{}{
+\begin{itemize}
+\item[2016]{\small\textnormal{High Performance Computing Autumn Academy, Demonstrator and Presenter, University of Cambridge}}
+\item[2016]{\textnormal{SMARTER5, Poster Presentation, University of Bayreuth, Germany}}
+\item[2016]{\textnormal{CASTEP Workshop, Demonstrator and Poster Presentation, University of Oxford}}
+\item[2016]{\textnormal{CCP9 Young Researchers Event, Poster Presentation, University of York}}
+\item[2015]{\textnormal{High Performance Computing Autumn Academy, Attendee, University of Cambridge}}
+\item[2015]{\textnormal{CASTEP Workshop, Attendee, University of Oxford}}
+\end{itemize}
+}
+\nocite{*}
+\vspace{-0.1in}
+\small{
+\bibliographystyle{unsrtnat}
+\bibliography{\jobname}}
+%\section{\textsc{\Large{Referees}}}
+%%\vspace{-0.2in}
+%\small{
+%\hspace*{2.5cm}\textbf{Dr Andrew Morris}; \Colorhref{mailto:ajm255@cam.ac.uk}{ajm255@cam.ac.uk}\\
+%\hspace*{2.5cm}\textbf{Prof Francisco Guinea}; \Colorhref{mailto:paco.guinea@icmm.csic.es}{paco.guinea@icmm.csic.es}\\
+%\hspace*{2.5cm}\textbf{Dr Paul Walmsley}; \Colorhref{mailto:paul.walmsley@manchester.ac.uk}{paul.walmsley@manchester.ac.uk}}
+%\clearpage
+%\section{\textsc{\Large{Publications}}}
+\end{document}}
