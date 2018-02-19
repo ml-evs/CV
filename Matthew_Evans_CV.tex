@@ -1,7 +1,10 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-\usepackage{libertine}
-\usepackage[scaled=0.9]{inconsolata}
+%\usepackage{libertine}
+%\usepackage[scaled=0.9]{inconsolata}
+\usepackage{fontspec}
+\setsansfont[BoldFont={Archivo Narrow Bold}]{Archivo Narrow}
+\setmonofont[BoldFont={Iosevka Term Medium}]{Iosevka Term Medium}
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
@@ -48,7 +51,7 @@
 \email{me388@cam.ac.uk}                               % optional, remove / comment the line if not wanted
 \homepage[www.tcm.phy.cam.ac.uk/\textasciitilde me388]{www.tcm.phy.cam.ac.uk/~me388/}
 \social[github]{ml-evs}                           % optional, remove / comment the line if not wanted
-\quote{ab initio calculations \textbullet\, energy storage\\ crystal structure databases \textbullet\, software development}
+\quote{\texttt{ab initio calculations \textbullet\, energy storage\\ crystal structure databases \textbullet\, software development}}
 
 \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 
@@ -85,8 +88,8 @@
 
 
 \section{Teaching Experience}
-\cvitem{2016--2018}{Supervisor: Part IB Electromagnetism, Dynamics and Thermodynamics, \emph{(Selwyn College)}.}
-\cvitem{2016--2018}{Demonstrator: Part IB Computational Physics (C++), \emph{(Cavendish Laboratory)}.}
+\cvitem{2016--}{Supervisor: Part IB Electromagnetism, Dynamics and Thermodynamics, \emph{(Selwyn College)}.}
+\cvitem{2016--}{Demonstrator: Part IB Computational Physics (C++), \emph{(Cavendish Laboratory)}.}
 \cvitem{2016--2017}{Volunteer: Key Stage 2 Code Club \emph{(Ridgefield Primary School, Cambridge)}.}
 \cvitem{2016}{Demonstrator: Graduate-level Electronic Structure, \emph{(Cavendish Laboratory)}.}
 \cvitem{2016}{Demonstrator: CASTEP Workshop \emph{(Oxford)} (x2), HPC Autumn Academy \emph{(Cambridge)}.}
@@ -106,11 +109,13 @@
 
 \section{Conferences \& Presentations}
 \cvitem{2018}{Total Energy and Force Methods, Poster Presentation, University of Cambridge}
+\cvitem{2017}{\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/ss_11.17/}{\emph{Crystal structure prediction for next-generation battery anodes}}, Invited Talk, Solid State Seminar Series, University of Cambridge}
 \cvitem{2017}{Second conference of Research Software Engineers, Volunteer, University of Manchester}
 \cvitem{2017}{CASTEP Developer Workshop, Demonstrator and Poster Presentation, University of Oxford}
 \cvitem{2017}{13th RSC Conference in Materials Chemistry, Poster Presentation, University of Liverpool}
 \cvitem{2017}{STFC Annual Battery Meeting, Attendee, Abingdon}
 \cvitem{2017}{CCP9 Young Researchers Event, Poster Presentation, University of Cambridge}
+\cvitem{2017}{Scientific Computing Day, Poster Presentation, University of Cambridge}
 \cvitem{2016}{High Performance Computing Autumn Academy, Presenter, University of Cambridge}
 \cvitem{2016}{SMARTER5, Poster Presentation, University of Bayreuth, Germany}
 \cvitem{2016}{CASTEP Workshop, Demonstrator and Poster Presentation, University of Oxford}
