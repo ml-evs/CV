@@ -4,17 +4,26 @@
 %\usepackage[scaled=0.9]{inconsolata}
 \usepackage{fontspec}
 \setsansfont[BoldFont={Archivo Narrow Bold}]{Archivo Narrow}
-\setmonofont[BoldFont={Iosevka Term Medium}]{Iosevka Term Medium}
+\setmonofont[Scale=0.9, BoldFont={Iosevka Term Medium}]{Iosevka Term Medium}
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 \definecolor{color2}{RGB}{12, 69, 129}
-\usepackage{fancyhdr}
+\usepackage[unicode,pdfencoding=auto]{hyperref}
 %\definecolor{color2}{RGB}{56,115,178}
 %\usepackage{doi}
-\usepackage{natbib}
+\usepackage[style=nature,sorting=ydnt]{biblatex}
+%\bibliography{pubs}
+\addbibresource{pubs.bib}
+
+% Reverse numbering in publications list
+\newcounter{entrycount}
+\AtDataInput{\stepcounter{entrycount}}
+\DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
+\newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
+
 \newcommand\colourhref[3][color2]{\href{#2}{\color{#1}#3}}
-\newcommand{\doi}[1]{DOI: \colourhref{https://dx.doi.org/#1}{#1}}
+\newcommand{\doi}[1]{DOI: {\colourhref{https://dx.doi.org/#1}{\texttt{#1}}}}
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -59,23 +68,23 @@
 %-----       resume       ---------------------------------------------------------
 \pagestyle{empty}
 \makecvtitle
-\section{Education}
-\cventry{2016--}{PhD Physics}{}{University of Cambridge}{\textit{Expected graduation 2019}}{}  % arguments 3 to 6 can be left empty
+\section{\texttt{EDUCATION}}
+\cventry{2016--}{PhD Physics}{Theory of Condensed Matter Group}{University of Cambridge}{\textit{Expected graduation 2019}}{}  % arguments 3 to 6 can be left empty
 \cventry{2015--2016}{MPhil Scientific Computing}{}{University of Cambridge}{\textit{Distinction}}{}  % arguments 3 to 6 can be left empty
 \cventry{2011--2015}{MPhys Physics with Theoretical Physics}{}{University of Manchester}{\textit{First Class (Hons)}}{}
 
-\section{Research interests \& Experience}
-\cvitem{PhD}{\textbf{Crystal structure prediction for energy storage applications}}
-\cvitem{}{with Dr Andrew Morris}
-\cvitem{}{Discovery and computational characterisation of novel high-capacity anode materials for Li-, Na- and K-ion batteries, using \emph{ab initio} random structure searching (AIRSS) and related approaches.}
+\section{\texttt{(RESEARCH INTERESTS + EXPERIENCE)}}
+\cvitem{PhD}{\textbf{Crystal structure prediction for next-generation energy storage applications}}
+\cvitem{}{with Dr Andrew Morris \emph{(University of Cambridge)}}
+\cvitem{}{Discovery and computational characterisation of novel high-capacity anode materials for Li-, Na- and K-ion batteries, using \emph{ab initio} random structure searching (AIRSS) and evolutionary approaches, implemented in the \colourhref{http://www.tcm.phy.cam.ac.uk/~me388/ilustrado}{\texttt{ilustrado}} package. PhD research undertaken as a member of the EPSRC CDT for Computational Methods in Materials Science.}
 
 \cvitem{MPhil}{\textbf{High-throughput \emph{ab initio} materials discovery}}
-\cvitem{}{with Dr Andrew Morris}
-\cvitem{}{Database approaches to materials design; wrote a software package, \colourhref{http://www.tcm.phy.cam.ac.uk/~me388/matador_docs/}{\texttt{MATADOR}}, to aggregate and analyse the results of first-principles calculations.}
+\cvitem{}{with Dr Andrew Morris \emph{(University of Cambridge)}}
+\cvitem{}{Database approaches to materials design; wrote a software package, \colourhref{http://www.tcm.phy.cam.ac.uk/~me388/matador}{\texttt{matador}}, to aggregate and analyse the results of first-principles calculations.}
 
-\cvitem{MPhys}{\textbf{Electronic structure of defects of graphene superlattices}}
-\cvitem{}{with Prof Francisco Guinea}
-\cvitem{}{Nearly-free electron model of graphene/h-BN superlattices with arbitrary defects included via Green's function  methods. Awarded Tessella Prize for development of a high-performance Python code to perform the computation and analysis.}
+\cvitem{MPhys}{\textbf{Electronic structure of defects in graphene superlattices}}
+\cvitem{}{with Prof Francisco Guinea \emph{(University of Manchester)}}
+\cvitem{}{Nearly-free electron model of graphene/h-BN superlattices with arbitrary defects included via Green's function  methods. Awarded Tessella Prize for software development.}
 
 \cvitem{UG}{\textbf{Interactions of quantised vortices in superfluid helium}}
 \cvitem{}{with Dr Paul Walmsley \& Prof Andrei Golov \emph{(University of Manchester)}}
@@ -85,9 +94,7 @@
 \cvitem{}{with Dr Ho-Kei Chan \& Prof Elena Besley \emph{(University of Nottingham)}}
 \cvitem{}{Application of a novel hard sphere packing regime to study CNT-encapsulated C$_{60}$ molecules.}
 
-
-
-\section{Teaching Experience}
+\section{\texttt{TEACHING}}
 \cvitem{2016--}{Supervisor: Part IB Electromagnetism, Dynamics and Thermodynamics, \emph{(Selwyn College)}.}
 \cvitem{2016--}{Demonstrator: Part IB Computational Physics (C++), \emph{(Cavendish Laboratory)}.}
 \cvitem{2016--2017}{Volunteer: Key Stage 2 Code Club \emph{(Ridgefield Primary School, Cambridge)}.}
@@ -99,38 +106,37 @@
 \item[--] Helped lead a successful pilot to teach primary school children programming using Scratch.\end{itemize}
 }
 
-\section{Computing}
+\section{\texttt{COMPUTING}}
 \centering Exposure: \textbf{Daily}, Intermittant, \textit{Occasional}.\\[0.2em]
 \cvdoubleitem{Languages}{\textbf{Python}, Fortran, C++, \textit{Rust}}{Databases}{\textbf{MongoDB}, \textit{SQL}}
-\cvdoubleitem{Computation}{\textbf{CASTEP}, Quantum Espresso}{Packages}{\textbf{NumPy, spglib, Jupyter}}
+\cvdoubleitem{DFT}{\textbf{CASTEP}, Quantum Espresso}{Packages}{\textbf{NumPy, spglib, Jupyter}}
 \cvdoubleitem{Platforms}{\textbf{Linux}, \textit{*nix}}{HPC Facilities}{ARCHER, CSD3, BNL}
 \cvdoubleitem{Software}{\textbf{vim}, \LaTeX, Inkscape, GIMP}{Utilities}{\textbf{git}, Docker, GNU toolchain}
 \cvdoubleitem{Data viz}{\textbf{matplotlib}, Bokeh, d3.js, seaborn}{Web}{\textit{JavaScript, HTML, CSS}}
 
-\section{Conferences \& Presentations}
+\section{\texttt{(CONFERENCES + PRESENTATIONS)}}
 \cvitem{2018}{Total Energy and Force Methods, Poster Presentation, University of Cambridge}
-\cvitem{2017}{\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/ss_11.17/}{\emph{Crystal structure prediction for next-generation battery anodes}}, Invited Talk, Solid State Seminar Series, University of Cambridge}
-\cvitem{2017}{Second conference of Research Software Engineers, Volunteer, University of Manchester}
-\cvitem{2017}{CASTEP Developer Workshop, Demonstrator and Poster Presentation, University of Oxford}
-\cvitem{2017}{13th RSC Conference in Materials Chemistry, Poster Presentation, University of Liverpool}
-\cvitem{2017}{STFC Annual Battery Meeting, Attendee, Abingdon}
-\cvitem{2017}{CCP9 Young Researchers Event, Poster Presentation, University of Cambridge}
-\cvitem{2017}{Scientific Computing Day, Poster Presentation, University of Cambridge}
+\cvitem{2017}{\emph{Crystal structure prediction for next-generation battery anodes} (\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/ss_11.17/}{slides}), Invited Talk, Solid State Seminar Series, University of Cambridge}
+\cvitem{}{Second conference of Research Software Engineers, Volunteer, University of Manchester}
+\cvitem{}{CASTEP Developer Workshop, Demonstrator and Poster Presentation, University of Oxford}
+\cvitem{}{13th RSC Conference in Materials Chemistry, Poster Presentation (\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/posters/mc13.pdf}{link}), University of Liverpool}
+\cvitem{}{STFC Annual Battery Meeting, Attendee, Abingdon}
+\cvitem{}{CCP9 Young Researchers Event, Poster Presentation, University of Cambridge}
+\cvitem{}{Scientific Computing Day, Poster Presentation, University of Cambridge}
 \cvitem{2016}{High Performance Computing Autumn Academy, Presenter, University of Cambridge}
-\cvitem{2016}{SMARTER5, Poster Presentation, University of Bayreuth, Germany}
-\cvitem{2016}{CASTEP Workshop, Demonstrator and Poster Presentation, University of Oxford}
-\cvitem{2016}{CCP9 Young Researchers Event, Poster Presentation, University of York}
+\cvitem{}{SMARTER5, Poster Presentation, University of Bayreuth, Germany}
+\cvitem{}{CASTEP Workshop, Demonstrator and Poster Presentation, University of Oxford}
+\cvitem{}{CCP9 Young Researchers Event, Poster Presentation, University of York}
 \cvitem{2015}{High Performance Computing Autumn Academy, Attendee, University of Cambridge}
-\cvitem{2015}{CASTEP Workshop, Attendee, University of Oxford}
+\cvitem{}{CASTEP Workshop, Attendee, University of Oxford}
 
 \pagestyle{fancy}
 \nocite{*}
-\bibliographystyle{plain}
-\bibliography{pubs}
-\section{Referees}
-\cvitem{}{Dr Andrew Morris, University of Birmingham; \colourhref{mailto:ajm255@cam.ac.uk}{ajm255@cam.ac.uk}}
-\cvitem{}{Prof Francisco Guinea, University of Manchester; \colourhref{mailto:paco.guinea@icm.csic.es}{paco.guinea@icm.csic.es}}
-\cvitem{}{Dr Paul Walmsley, University of Manchester; \colourhref{mailto:paul.walmsley@manchester.ac.uk}{paul.walmsley@manchester.ac.uk}}
+\printbibliography[title={\texttt{PUBLICATIONS}}]
+\section{\texttt{REFEREES}}
+\cvitem{}{Dr Andrew Morris, University of Birmingham; \colourhref{mailto:ajm255@cam.ac.uk}{\texttt{ajm255@cam.ac.uk}}}
+\cvitem{}{Prof Francisco Guinea, University of Manchester; \colourhref{mailto:paco.guinea@icm.csic.es}{\texttt{paco.guinea@icm.csic.es}}}
+\cvitem{}{Dr Paul Walmsley, University of Manchester; \colourhref{mailto:paul.walmsley@manchester.ac.uk}{\texttt{paul.walmsley@manchester.ac.uk}}}
 %\vskip
 %Last modified: \today.
 \end{document}
