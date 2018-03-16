@@ -16,6 +16,12 @@
 %\bibliography{pubs}
 \addbibresource{pubs.bib}
 
+%hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
 % Reverse numbering in publications list
 \newcounter{entrycount}
 \AtDataInput{\stepcounter{entrycount}}
@@ -80,7 +86,7 @@
 
 \cvitem{MPhil}{\textbf{High-throughput \emph{ab initio} materials discovery}}
 \cvitem{}{with Dr Andrew Morris \emph{(University of Cambridge)}}
-\cvitem{}{Database approaches to materials design; wrote a software package, \colourhref{http://www.tcm.phy.cam.ac.uk/~me388/matador}{\texttt{matador}}, to aggregate and analyse the results of first-principles calculations.}
+\cvitem{}{Database approaches to materials design; wrote a software package, \colourhref{http://www.tcm.phy.cam.ac.uk/~me388/matador}{\texttt{matador}}, to aggregate and {analyse} the results of first-principles calculations.}
 
 \cvitem{MPhys}{\textbf{Electronic structure of defects in graphene superlattices}}
 \cvitem{}{with Prof Francisco Guinea \emph{(University of Manchester)}}
@@ -138,7 +144,7 @@
 \cvitem{}{Prof Francisco Guinea, University of Manchester; \colourhref{mailto:paco.guinea@icm.csic.es}{\texttt{paco.guinea@icm.csic.es}}}
 \cvitem{}{Dr Paul Walmsley, University of Manchester; \colourhref{mailto:paul.walmsley@manchester.ac.uk}{\texttt{paul.walmsley@manchester.ac.uk}}}
 
-\clearpage
+%\clearpage
 %\pagestyle{empty}
-%\input{../summer_2k18_internships/nexeon_cover_letter}
+%\input{../summer_2k18_internships/faradion/faradion_cover_letter.tex}
 \end{document}
