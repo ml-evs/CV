@@ -6,3 +6,9 @@ all: Matthew_Evans_CV.tex
 		xelatex Matthew_Evans_CV.tex
 		bash -c 'rm moderncv*'
 		bash -c 'rm tweaklist.sty'
+
+.PHONY: clean
+
+clean:
+		bash -c 'rm moderncv*'
+		bash -c 'rm tweaklist.sty'
