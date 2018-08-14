@@ -13,8 +13,14 @@
 \usepackage[unicode,pdfencoding=auto]{hyperref}
 %\definecolor{color2}{RGB}{56,115,178}
 %\usepackage{doi}
-\usepackage[style=nature,sorting=ydnt]{biblatex}
+\usepackage[style=nature,sorting=sortyear,defernumbers=true]{biblatex}
 \addbibresource{pubs.bib}
+
+\DeclareSortingScheme{sortyear}{
+    \sort[direction=descending]{
+        \field{sortyear}
+    }
+}
 
 \DeclareSourcemap{
   \maps[datatype=bibtex]{
@@ -77,7 +83,7 @@
 \email{me388@cam.ac.uk}                               % optional, remove / comment the line if not wanted
 \homepage{ml-evs.science}
 \social[github]{ml-evs}                           % optional, remove / comment the line if not wanted
-\quote{\texttt{ab initio calculations \textbullet\, energy storage\\ crystal structure databases \textbullet\, software development}}
+\quote{\texttt{energy storage \textbullet\,ab initio calculations\\ crystal structure databases \textbullet\, software development}}
 
 \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 
@@ -119,7 +125,7 @@
 
 \section{\texttt{(TEACHING + SERVICE)}}
 \cvitem{2018--}{Organiser of fortnightly computational physics talk series, \emph{(CDT for Computational Materials Science)}.}
-\cvitem{2016--}{Active member of TCM syadmin team, \emph{(Cavendish Laboratory)}.}
+\cvitem{2016--}{Active member of TCM \texttt{sysadmin} team, \emph{(Cavendish Laboratory)}.}
 \cvitem{2016--}{Supervisor: Part IB Electromagnetism, Dynamics and Thermodynamics, \emph{(Selwyn College)}.}
 \cvitem{2016--}{Demonstrator: Part IB Computational Physics (C++), \emph{(Cavendish Laboratory)}.}
 \cvitem{2016--}{Demonstrator: 3x at annual CASTEP workshop, University of Oxford}
@@ -141,7 +147,7 @@ Status: {\color{darkgray} in preparation}, {\color{OliveGreen} preprint}, {publi
 \printbibliography[heading=none,notkeyword=inprep]
 
 \section{\texttt{PROFESSIONAL ACTIVITIES}}
-\cvitem{Upcoming}{\emph{Sn-P anodes for potassium-ion batteries: insights from crystal structure prediction}, Contributed Talk, SMARTER 6, Kemijski Inštitut, Slovenia}
+%\cvitem{Upcoming}{\emph{Sn-P anodes for potassium-ion batteries: insights from crystal structure prediction}, Contributed Talk, SMARTER 6, Kemijski Inštitut, Slovenia}
 \cvitem{2015--2018}{Presented posters and talks at nearly 20 conferences and workshops both nationally and internationally. Selected works can be found on my \colourhref{ml-evs.github.io/talks.html}{personal website}.}
 \cvitem{2018}{\emph{\texttt{matador}: databases and crystal structure prediction} (\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/optimade/matador_optimade.pdf}{slides}), Invited Talk, OPTiMaDe workshop, CECAM@EPFL, Switzerland}
 \cvitem{}{HPC Midlands+ Substantial Project: awarded 1.3 MCPUh for \emph{High-throughput materials discovery for energy applications}, M. L. Evans and A. J. Morris.}
@@ -169,10 +175,9 @@ Status: {\color{darkgray} in preparation}, {\color{OliveGreen} preprint}, {publi
 \section{\texttt{REFEREES}}
 \pagestyle{fancy}
 \cvitem{}{Dr Andrew Morris, University of Birmingham; \colourhref{mailto:ajm255@cam.ac.uk}{\texttt{a.j.morris.1@bham.ac.uk}}}
-\cvitem{}{Prof Francisco Guinea, University of Manchester; \colourhref{mailto:paco.guinea@icm.csic.es}{\texttt{paco.guinea@icm.csic.es}}}
+\cvitem{}{Prof Mike Payne, University of Cambridge; \colourhref{mailto:mcp1@cam.ac.uk}{\texttt{mcp1@cam.ac.uk}}}
 \cvitem{}{Dr Paul Walmsley, University of Manchester; \colourhref{mailto:paul.walmsley@manchester.ac.uk}{\texttt{paul.walmsley@manchester.ac.uk}}}
 
-\pagestyle{empty}
-%\input{../summer_2k18_internships/ccdc/ccdc_cover_letter}
+%\pagestyle{empty}
 
 \end{document}
