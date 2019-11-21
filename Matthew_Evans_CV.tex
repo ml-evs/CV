@@ -83,7 +83,7 @@
 \email{me388@cam.ac.uk}                               % optional, remove / comment the line if not wanted
 \homepage{ml-evs.science}
 \social[github]{ml-evs}                           % optional, remove / comment the line if not wanted
-\quote{\texttt{energy storage \textbullet\,ab initio calculations\\ crystal structure databases \textbullet\, software development}}
+\quote{\texttt{energy storage \textbullet\,ab initio calculations\\ crystal structure databases \textbullet\, open science \& software}}
 
 \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 
@@ -93,29 +93,32 @@
 \makecvtitle
 \section{\texttt{EDUCATION}}
 \cventry{2016--}{PhD Physics}{Theory of Condensed Matter Group}{University of Cambridge}{}{}  % arguments 3 to 6 can be left empty
-\cventry{2015--2016}{MPhil Scientific Computing}{}{University of Cambridge}{\textit{Distinction}}{}  % arguments 3 to 6 can be left empty
+\cventry{2015--2016}{MPhil Scientific Computing}{}{University of Cambridge}{\textit{Pass with distinction}}{}  % arguments 3 to 6 can be left empty
 \cventry{2011--2015}{MPhys Physics with Theoretical Physics}{}{University of Manchester}{\textit{First Class (Hons)}}{}
 
 \section{\texttt{EXPERIENCE}}
 \cvitem{PhD}{\textbf{Crystal structure prediction for next-generation energy storage applications}}
 \cvitem{}{with Dr Andrew Morris \emph{(University of Cambridge/University of Birmingham)}}
-\cvitem{}{Discovery and computational characterisation of novel high-capacity anode materials for Li-, Na- and K-ion batteries, using \emph{ab initio} random structure searching (AIRSS) and evolutionary approaches, implemented in the open-source \colourhref{http://ilustrado.readthedocs.io}{\texttt{ilustrado}} package. Contributed to the CASTEP and OptaDOS codes. PhD research undertaken as a member of the EPSRC CDT for Computational Methods in Materials Science.}
+\cvitem{}{Discovery and computational characterisation of novel high-capacity anode materials for Li-, Na- and K-ion batteries. Author of two open-source Python packages: database approaches for high-throughput calculations and materials design with \colourhref{http://matador.science}{\texttt{matador}} and crystal structure prediction with \colourhref{http://ilustrado.readthedocs.io}{\texttt{ilustrado}} package. Contributed to the CASTEP and OptaDOS codes. Active member of the OPTiMaDe consortium for materials database interoperation. PhD research undertaken as a member of the EPSRC CDT for Computational Methods in Materials Science.}
+\cvitem{}{\textbf{Visiting Researcher}}
+\cvitem{2019}{Department of Applied Physics, Aalto University}
+\cvitem{}{Received HPC-Europa funding to visit the group of Prof Adam Foster for 7 weeks, with computational resources provided by the Finnish IT center for science (CSC).}
 
 \cvitem{Internship}{\textbf{Scientific Software Developer}}
 \cvitem{2019}{Enthought Inc., Cambridge}
-\cvitem{}{Worked on the open source, Horizon 2020 funded \colourhref{https://github.com/force-h2020}{FORCE project}, with a focus on adding functionality to the workflow manager for multi-criteria optimisations, including developing a Bayesian optimisation plugin. Helped develop Cython bindings for the ACADO toolkit.}
+\cvitem{}{Worked on the open source, Horizon 2020 \colourhref{https://github.com/force-h2020}{FORCE project}, with a focus on adding functionality to the workflow manager for multi-criteria optimisations, including developing a Bayesian optimisation plugin. Helped develop Cython bindings for the ACADO toolkit.}
 
-\cvitem{MPhil}{\textbf{High-throughput \emph{ab initio} materials discovery}}
-\cvitem{2015--2016}{with Dr Andrew Morris \emph{(University of Cambridge)}}
-\cvitem{}{Database approaches to materials design; developed an open-source software package, \colourhref{http://matador.science}{\texttt{matador}}, to aggregate and {analyse} the results of first-principles calculations.}
+%\cvitem{MPhil}{\textbf{High-throughput \emph{ab initio} materials discovery}}
+%\cvitem{2015--2016}{with Dr Andrew Morris \emph{(University of Cambridge)}}
+%\cvitem{}{Database approaches to materials design; developed an open-source software package, \colourhref{http://matador.science}{\texttt{matador}}, to aggregate and {analyse} the results of first-principles calculations.}
+
+\cvitem{UG}{\textbf{Interactions of quantised vortices in superfluid helium}}
+\cvitem{2014, 2015}{with Dr Paul Walmsley \& Prof Andrei Golov \emph{(University of Manchester)}}
+%\cvitem{}{Spent two summers developing \colourhref{https://github.com/ml-evs/vfmcpp}{\texttt{vfmcpp}}, a C++/OpenMP implementation of the vortex filament model of superfluid helium, to study microscopic vortex dynamics and reconnection events \cite{PhysRevFluids.1.044502}. }
 
 \cvitem{MPhys}{\textbf{Electronic structure of defects in graphene superlattices}}
 \cvitem{2014--2015}{with Prof Francisco Guinea \emph{(University of Manchester)}}
 %\cvitem{}{Nearly-free electron model of graphene/h-BN superlattices with arbitrary defects included via Green's function  methods. Awarded Tessella Prize for software development.}
-
-\cvitem{UG}{\textbf{Interactions of quantised vortices in superfluid helium}}
-\cvitem{2014,2015}{with Dr Paul Walmsley \& Prof Andrei Golov \emph{(University of Manchester)}}
-%\cvitem{}{Spent two summers developing \colourhref{https://github.com/ml-evs/vfmcpp}{\texttt{vfmcpp}}, a C++/OpenMP implementation of the vortex filament model of superfluid helium, to study microscopic vortex dynamics and reconnection events \cite{PhysRevFluids.1.044502}. }
 
 \cvitem{UG}{\textbf{Hard sphere packing of nanotube-encapsulated fullerenes}}
 \cvitem{2013}{with Dr Ho-Kei Chan \& Prof Elena Besley \emph{(University of Nottingham)}}
@@ -123,9 +126,9 @@
 \section{\texttt{COMPUTING}}
 \centering Exposure: \textbf{Daily}, Intermittent, \textit{Occasional}.\\[0.2em]
 \cvdoubleitem{Languages}{\textbf{Python}, Fortran, Cython, C++}{Databases}{\textbf{MongoDB}, \textit{SQL}}
-\cvdoubleitem{DFT}{\textbf{CASTEP}, Quantum Espresso}{Packages}{\textbf{NumPy, SciPy, spglib}, scikit-learn}
-\cvdoubleitem{Platforms}{\textbf{Linux}, *nix}{Practices}{\textbf{Test-driven development, CI}}
-\cvdoubleitem{Data viz}{\textbf{matplotlib}, Bokeh, d3.js}{Tools}{\textbf{git}, \textbf{vim}, \textbf{Docker}}
+\cvdoubleitem{DFT}{\textbf{CASTEP}, Quantum Espresso, GPAW}{Packages}{\textbf{NumPy, SciPy}, spglib, scikit-learn}
+\cvdoubleitem{Tools}{\textbf{git}, \textbf{vim}, \textit{Docker}}{Practices}{\textbf{Test-driven development, CI}}
+%\cvdoubleitem{Data viz}{\textbf{matplotlib}, Bokeh, d3.js}{Tools}{\textbf{git}, \textbf{vim}, \textit{Docker}}
 
 \section{\texttt{(TEACHING + SERVICE)}}
 \cvitem{2018--}{Reviewed manuscripts for \emph{Scientific Reports}}
@@ -138,17 +141,17 @@
         with Git}.
 \end{itemize}}
 \vspace{-0.2in}
-\cvitem{2018}{Demonstrator: Graduate-level Atomistic Modelling of Materials, Cavendish Laboratory}
-\cvitem{2016--2018}{Supervisor: Part IB Electromagnetism, Dynamics and Thermodynamics, Selwyn College
+%\cvitem{2018--2019}{Demonstrator: 2x Graduate-level Atomistic Modelling of Materials, Cavendish Laboratory}
+\cvitem{2016--2018}{Supervisor: 2x Part IB Electromagnetism, Dynamics and Thermodynamics, Selwyn College
 \begin{itemize}
     \item[--] Small group teaching, providing detailed feedback on assigned problems.
 \end{itemize}}
 \vspace{-0.2in}
-\cvitem{2016--2018}{Demonstrator: Part IB Introduction to Computing (C++), Cavendish Laboratory}
-\cvitem{2016--}{Demonstrator: 3x at annual CASTEP workshop, University of Oxford}
+\cvitem{2016--2019}{Demonstrator: 3x Part IB Introduction to Computing (C++), Cavendish Laboratory}
+\cvitem{2016--}{Demonstrator: 4x at annual CASTEP workshop, University of Oxford}
 \cvitem{2017}{Volunteer: 2nd Conference of Research Software Engineers, University of Manchester}
 \cvitem{2016--2017}{Volunteer: Key Stage 2 Code Club, Ridgefield Primary School, Cambridge}
-\cvitem{2016}{Demonstrator: Graduate-level Electronic Structure, Cavendish Laboratory}
+%\cvitem{2016}{Demonstrator: Graduate-level Electronic Structure, Cavendish Laboratory}
 \cvitem{2012--2015}{{Tutor: GCSE Maths \& Key Stage 2 Programming for \colourhref{http://thetutortrust.org/}{The Tutor Trust}, Manchester}
 \begin{itemize}
     \item[--] Provided tuition to small groups and `looked after children' across 15 schools.
@@ -156,6 +159,7 @@
 \vspace{-0.3in}
 
 \section{\texttt{(AWARDS + HONOURS)}}
+\cvitem{2019}{HPC-Europa 3 funding to visit Aalto University for 7 weeks and associated computing time.}
 \cvitem{2018}{Tier-2 HPC Resource Allocation: PI on project awarded 4 MCPUh, \emph{Crystal structure prediction for next-generation solar absorbers}, \textbf{M. L. Evans}, D. O. Scanlon and A. J. Morris.}
 \cvitem{}{HPC Midlands+ Substantial Project: awarded 1.3 MCPUh for \emph{High-throughput materials discovery for energy applications}, \textbf{M. L. Evans} and A. J. Morris.}
 \cvitem{2017}{Tier-2 HPC Resource Allocation: Co-investigator on project awarded 4 MCPUh, \emph{Ab initio structure prediction for next-generation battery materials}, B. Karasulu, \textbf{M. L. Evans} and A. J. Morris.}
@@ -163,16 +167,18 @@
 \cvitem{2013, 2014}{Undergraduate research bursary for two summers as an undergraduate, totalling £4200.}
 \cvitem{2011--2015}{Means-tested and merit based scholarship to study at the University of Manchester, worth £12,000.}
 
-\section{\texttt{PRESENTATIONS}}
+\section{\texttt{SELECTED PRESENTATIONS}}
 \cvitem{2015--}{Presented posters and talks at 20 conferences and workshops both
 nationally and internationally. Selected works can be found on my
 \colourhref{http://ml-evs.github.io/talks.html}{personal website}.}
+\cvitem{2019}{Contributed talk: \emph{Phosphorus anodes for potassium-ion batteries: insights from crystal structure prediction}, EMRS Spring 2019, Nice, France}
+\cvitem{}{Invited talk: \emph{\texttt{matador \& OPTiMaDe}}, CECAM Workshop, Open Databases Integration for Materials Design 2019, EPFL, Switzerland}
 \cvitem{2018}{Contributed talk: \emph{Sn-P anodes for potassium-ion batteries: insights from crystal structure prediction}, SMARTER6 Conference, Ljubljana, Slovenia}
-\cvitem{}{Invited talk: \emph{\texttt{matador}: databases and crystal structure prediction} (\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/optimade/matador\_optimade.pdf}{slides}), CECAM Workshop, Open Databases Integration for Materials Design, EPFL, Switzerland}
+\cvitem{}{Invited talk: \emph{\texttt{matador}: databases and crystal structure prediction} (\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/optimade/matador\_optimade.pdf}{slides}), CECAM Workshop, Open Databases Integration for Materials Design 2018, EPFL, Switzerland}
 \cvitem{2017}{Invited talk: \emph{Crystal structure prediction for next-generation battery anodes} (\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/ss\_11.17/}{slides}), Solid State Seminar Series, University of Cambridge}
-\cvitem{}{Poster Presentation: 13th RSC Conference in Materials Chemistry (\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/posters/mc13.pdf}{poster}), University of Liverpool}
-\cvitem{2016}{Poster Presentation: SMARTER5 Conference, University of Bayreuth, Germany}
-\pagebreak
+%\cvitem{}{Poster Presentation: 13th RSC Conference in Materials Chemistry (\colourhref{http://www.tcm.phy.cam.ac.uk/~me388/posters/mc13.pdf}{poster}), University of Liverpool}
+%\cvitem{2016}{Poster Presentation: SMARTER5 Conference, University of Bayreuth, Germany}
+%\pagebreak
 \section{\texttt{PUBLICATIONS}}
 %Status: {\color{darkgray} in preparation}, {\color{OliveGreen} preprint}, {published}.
 \nocite{*}
