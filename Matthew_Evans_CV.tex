@@ -13,22 +13,26 @@
 \usepackage[unicode,pdfencoding=auto]{hyperref}
 %\definecolor{color2}{RGB}{56,115,178}
 %\usepackage{doi}
-\usepackage[style=nature,sorting=sortyear,defernumbers=true]{biblatex}
+\usepackage[style=nature,sorting=ymdnt,defernumbers=true,date=year]{biblatex}
 \addbibresource{pubs.bib}
 
-\DeclareSortingScheme{sortyear}{
-    \sort[direction=ascending]{
-        \field{sortyear}
-    }
-}
+%\DeclareSourcemap{
+%  \maps[datatype=bibtex]{
+%    \map{
+%      \step[fieldsource=keywords, match=inprep,final,preprint]
+%      \step[fieldset=keywords, fieldvalue=inprep]
+%    }
+%  }
+%}
 
-\DeclareSourcemap{
-  \maps[datatype=bibtex]{
-    \map{
-      \step[fieldsource=keywords, match=inprep,final]
-      \step[fieldset=keywords, fieldvalue=inprep]
+\DeclareSortingScheme{ymdnt}{
+    \sort[direction=descending]{
+        \field{year}
     }
-  }
+    \sort[direction=descending]{
+        \field{month}
+        \literal{99999}
+    }
 }
 
 %hyphenation
