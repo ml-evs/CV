@@ -13,7 +13,7 @@
 \usepackage[unicode,pdfencoding=auto]{hyperref}
 %\definecolor{color2}{RGB}{56,115,178}
 %\usepackage{doi}
-\usepackage[style=nature,sorting=ymdnt,defernumbers=true,date=year]{biblatex}
+\usepackage[style=nature,sorting=ymdnt,defernumbers=true,date=year,sortcites=true]{biblatex}
 \addbibresource{pubs.bib}
 
 %\DeclareSourcemap{
@@ -96,38 +96,53 @@
 \pagestyle{empty}
 \makecvtitle
 \section{\texttt{EDUCATION}}
-\cventry{2016--}{PhD Physics}{Theory of Condensed Matter Group}{University of Cambridge}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2016--}{PhD Physics}{}{Theory of Condensed Matter Group, University of Cambridge}{}{}  % arguments 3 to 6 can be left empty
 \cventry{2015--2016}{MPhil Scientific Computing}{}{University of Cambridge}{\textit{Pass with distinction}}{}  % arguments 3 to 6 can be left empty
 \cventry{2011--2015}{MPhys Physics with Theoretical Physics}{}{University of Manchester}{\textit{First Class (Hons)}}{}
 
 \section{\texttt{EXPERIENCE}}
-\cvitem{2016--2020}{\textbf{Crystal structure prediction for next-generation energy storage applications}}
-\cvitem{PhD}{with Dr Andrew Morris \emph{(University of Cambridge/University of Birmingham)}}
-\cvitem{}{Discovery and computational characterisation of high-capacity conversion anodes for Li-, Na- and K-ion batteries. Author of two open-source Python packages: database approaches for high-throughput calculations and materials design with \colourhref{http://matador.science}{\texttt{matador}} and crystal structure prediction with \colourhref{http://ilustrado.readthedocs.io}{\texttt{ilustrado}}. Contributed to the \colourhref{https://castep.org}{CASTEP} and \colourhref{https://optimade.org}{OptaDOS} codes. Active member of the \colourhref{https://optiamde.org}{OPTIMADE consortium} for materials database interoperation and author and maintainer of \colourhref{https://github.com/Materials-Consortia/optimade-python-tools}{\texttt{optimade-python-tools}} package and \colourhref{https://odbx.science}{\texttt{odbx}} implementation.
+\cvitem{2020--}{\textbf{Postdoctoral Researcher}}
+\cvitem{}{with Prof Gian-Marco Rignanese (\emph{Universit\`{e} catholique de Louvain})}
+\cvitem{}{
+\begin{itemize}
+    \item[--] Machine learning for small materials datasets (MODNet),
+    \item[--] Continuing work on the OPTIMADE API,
+    \item[--] High-throughput workflows for computational materials science.
+\end{itemize}}
+\vspace{-0.2in}
+\cvitem{2016--2020}{\textbf{PhD student: Crystal structure prediction for next-generation energy storage}}
+\cvitem{}{with Dr Andrew Morris \emph{(University of Cambridge/University of Birmingham)}}
+\cvitem{}{\begin{itemize}
+    \item[--] Computional materials Discovery for conversion anodes for Li, Na and K-ion batteries \cite{NaP, KP, CuP, JM}
+    \item[--] Author of two open-source Python packages: database approaches for high-throughput calculations and materials design with \colourhref{http://matador.science}{\texttt{matador}} \cite{matador} and crystal structure prediction with \colourhref{http://ilustrado.readthedocs.io}{\texttt{ilustrado}}.
+    \item[--] Contributed to the \colourhref{https://castep.org}{CASTEP} and \colourhref{https://optimade.org}{OptaDOS} codes.
+    \item[--] Active member of the \colourhref{https://optiamde.org}{OPTIMADE consortium} for materials database interoperation \cite{optimade} and author and maintainer of \colourhref{https://github.com/Materials-Consortia/optimade-python-tools}{\texttt{optimade-python-tools}} package \cite{optimade-python-tools} and \colourhref{https://odbx.science}{\texttt{odbx}} implementation.
+\end{itemize}}
 %PhD research undertaken as a member of the EPSRC CDT for Computational Methods in Materials Science.
-}
+\vspace{-0.2in}
 \cvitem{2019}{\textbf{Visiting Researcher}}
 \cvitem{}{Department of Applied Physics, Aalto University}
 \cvitem{}{Received HPC-Europa funding to visit the group of Prof Adam Foster for 7 weeks, with computational resources provided by the Finnish IT center for science (CSC).}
 
-\cvitem{2019}{\textbf{Scientific Software Developer}}
-\cvitem{Internship}{Enthought Inc., Cambridge}
-\cvitem{}{Worked on the open source, Horizon 2020 \colourhref{https://github.com/force-h2020}{FORCE project}, with a focus on adding functionality to the workflow manager for multi-criteria optimisations, including developing a Bayesian optimisation plugin. Helped develop Cython bindings for the ACADO toolkit.}
+\cvitem{2019}{\textbf{Scientific Software Developer (Intern)}}
+\cvitem{}{Enthought Inc., Cambridge}
+\cvitem{}{Worked on the open source, Horizon 2020 \colourhref{https://github.com/force-h2020}{FORCE project}, with a focus on adding functionality to the workflow manager for multi-criteria optimisations.
+, including developing a Bayesian optimisation plugin. Helped develop Cython bindings for the ACADO toolkit.}
 
 %\cvitem{MPhil}{\textbf{High-throughput \emph{ab initio} materials discovery}}
 %\cvitem{2015--2016}{with Dr Andrew Morris \emph{(University of Cambridge)}}
 %\cvitem{}{Database approaches to materials design; developed an open-source software package, \colourhref{http://matador.science}{\texttt{matador}}, to aggregate and {analyse} the results of first-principles calculations.}
 
-\cvitem{2014, 2015}{\textbf{Interactions of quantised vortices in superfluid helium}}
-\cvitem{UG}{with Dr Paul Walmsley \& Prof Andrei Golov \emph{(University of Manchester)}}
+\cvitem{2014, 2015}{\textbf{UG research: Interactions of quantised vortices in superfluid helium}}
+\cvitem{}{with Dr Paul Walmsley \& Prof Andrei Golov \emph{(University of Manchester)}}
 %\cvitem{}{Spent two summers developing \colourhref{https://github.com/ml-evs/vfmcpp}{\texttt{vfmcpp}}, a C++/OpenMP implementation of the vortex filament model of superfluid helium, to study microscopic vortex dynamics and reconnection events \cite{PhysRevFluids.1.044502}. }
 
-\cvitem{2014--2015}{\textbf{Electronic structure of defects in graphene superlattices}}
-\cvitem{MPhys}{with Prof Francisco Guinea \emph{(University of Manchester)}}
+\cvitem{2014--2015}{\textbf{MPhys project: Electronic structure of defects in graphene superlattices}}
+\cvitem{}{with Prof Francisco Guinea \emph{(University of Manchester)}}
 %\cvitem{}{Nearly-free electron model of graphene/h-BN superlattices with arbitrary defects included via Green's function  methods. Awarded Tessella Prize for software development.}
 
-\cvitem{2013}{\textbf{Hard sphere packing of nanotube-encapsulated fullerenes}}
-\cvitem{UG}{with Dr Ho-Kei Chan \& Prof Elena Besley \emph{(University of Nottingham)}}
+\cvitem{2013}{\textbf{UG research: Hard sphere packing of nanotube-encapsulated fullerenes}}
+\cvitem{}{with Dr Ho-Kei Chan \& Prof Elena Besley \emph{(University of Nottingham)}}
 %\cvitem{}{Application of a novel hard sphere packing regime to study CNT-encapsulated fullerenes.}
 \section{\texttt{COMPUTING}}
 \centering Exposure: \textbf{Daily}, Intermittent, \textit{Occasional}.\\[0.2em]
