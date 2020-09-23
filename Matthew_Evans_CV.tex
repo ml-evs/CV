@@ -48,7 +48,9 @@
 \newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
 
 \newcommand\colourhref[3][color2]{\href{#2}{\color{#1}#3}}
-\newcommand{\doi}[1]{DOI: {\colourhref{https://dx.doi.org/#1}{\texttt{#1}}}}
+\newcommand\greencolourhref[3][OliveGreen]{\href{#2}{\color{#1}#3}}
+\newcommand{\doi}[1]{DOI: \,{\colourhref{https://dx.doi.org/#1}{\texttt{#1}}}}
+\newcommand{\eprint}[1]{{\greencolourhref{#1}{\texttt{#1}}}}
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
