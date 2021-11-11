@@ -1,8 +1,9 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 \usepackage{fontspec}
 \setsansfont[BoldFont={Archivo Narrow Bold}]{Archivo Narrow}
-\setmonofont[Scale=0.9, BoldFont={Iosevka Term Medium}]{Iosevka Term Medium}
+\setmonofont[Scale=0.9, BoldFont={Iosevka SS07}]{Iosevka SS07}
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
@@ -95,13 +96,14 @@
 %\input{cover_letter.tex}
 %\newpage
 \makecvtitle
+%\pagestyle{empty}
 \section{\texttt{EDUCATION}}
 \cventry{2016--}{PhD Physics}{}{Theory of Condensed Matter Group, University of Cambridge}{}{}  % arguments 3 to 6 can be left empty
 \cventry{2015--2016}{MPhil Scientific Computing}{}{University of Cambridge}{\textit{Pass with distinction}}{}  % arguments 3 to 6 can be left empty
 \cventry{2011--2015}{MPhys Physics with Theoretical Physics}{}{University of Manchester}{\textit{First Class (Hons)}}{}
 
 \section{\texttt{EXPERIENCE}}
-\cvitem{2021-}{\textbf{Visiting Researcher}}
+\cvitem{2021--}{\textbf{Visiting Researcher}}
 \cvitem{}{with Prof Clare Grey (\emph{University of Cambridge})}
 \cvitem{}{
 \begin{itemize}
@@ -148,24 +150,25 @@
 \cvitem{2013}{\textbf{UG research: Hard sphere packing of nanotube-encapsulated fullerenes}}
 \cvitem{}{with Dr Ho-Kei Chan \& Prof Elena Besley \emph{(University of Nottingham)}}
 %\cvitem{}{Application of a novel hard sphere packing regime to study CNT-encapsulated fullerenes.}
-\clearpage
+%\clearpage
 \section{\texttt{COMPUTING}}
+%\pagestyle{empty}
 \centering Exposure: \textbf{Daily}, Intermittent, \textit{Occasional}.\\[0.2em]
 \cvdoubleitem{Languages}{\textbf{Python}, Fortran, Cython, C++}{Databases}{\textbf{MongoDB}, \textit{SQL}, \textit{Elasticsearch}}
-%\cvdoubleitem{DFT}{\textbf{CASTEP}, Quantum Espresso, GPAW}{Packages}{\textbf{NumPy, SciPy, matplotlib, scikit-learn, pandas}, Tensorflow}
+\cvdoubleitem{DFT}{\textbf{CASTEP}, Quantum Espresso, GPAW}{Packages}{\textbf{NumPy, SciPy, matplotlib, scikit-learn, FastAPI}, Tensorflow}
 \cvdoubleitem{Tools}{\textbf{git}, \textbf{vim}, \textbf{Docker}}{Practices}{\textbf{Test-driven development, CI}}
 %\cvdoubleitem{Data viz}{\textbf{matplotlib}, Bokeh, d3.js}{Tools}{\textbf{git}, \textbf{vim}, \textit{Docker}}
 
 \section{\texttt{(TEACHING + SERVICE)}}
-\cvitem{2020-}{Co-chair of the Research Data Alliance (RDA) IG \emph{Materials Data, Infrastructure \& Interoperability}}
+\cvitem{2020--}{Co-chair of the Research Data Alliance (RDA) IG \emph{Materials Data, Infrastructure \& Interoperability}}
 \cvitem{2018--}{Reviewed manuscripts for \emph{npj. Computational Materials}, \emph{J. Phys.: Cond. Mat.}, \emph{Scientific Reports}}
 \cvitem{2021}{Mentor at Acceleration Consortium Hackathon on Scientific Databases}
-\cvitem{2021}{Developed and delivered a \colourhref{https://github.com/Materials-Consortia/optimade-tutorial-exercises}{2 day OPTIMADE tutorial} for the NOMAD Virtual Tutorial Series.}
+\cvitem{2021}{Developed and delivered a \colourhref{https://github.com/Materials-Consortia/optimade-tutorial-exercises}{2-day OPTIMADE tutorial} for the NOMAD Virtual Tutorial Series.}
 \cvitem{2016--2020}{Active member of TCM \texttt{sysadmin} team, Cavendish Laboratory}
 \cvitem{2019-2021}{Demonstrator: Part II Computational Physics, Cavendish Laboratory
 \begin{itemize}
     \item[--] Demonstrated scientific Python to beginners in weekly labs (2019 only).
-    \item[--] Wrote and delivered a tutorial on the basics of
+    \item[--] Conceptualised and delivered a tutorial on the basics of
         \colourhref{https://github.com/ml-evs/git-tutorial}{version control
         with Git} (2019-2021).
 \end{itemize}}
@@ -196,13 +199,11 @@
 \cvitem{2015}{Tesella Prize for Software, University of Manchester, for the most effective use of software in a final year physics project.}
 \cvitem{2013, 2014}{Undergraduate research bursary for two summers as an undergraduate, totalling £4200.}
 \cvitem{2011--2015}{Means-tested and merit based scholarship to study at the University of Manchester, worth £12,000.}
-
+%\clearpage
 \section{\texttt{SELECTED PRESENTATIONS}}
-\cvitem{2015--}{Presented posters and talks at over 20 conferences and workshops both
-nationally and internationally. Selected works can be found on my
-\colourhref{https://ml-evs.science/talks.html}{personal website}.}
-\cvitem{2021}{Invited talk: \emph{The OPTIMADE Ecosystem}, DoE Battery Genome Initiative}
-\cvitem{2021}{Discussion: \emph{Delivery platforms for open marketplaces}, Research Data Alliance (RDA) 17th Virtual Plenary Meeting}
+\cvitem{2021}{Invited panel discussions: \emph{International Materials Data: Joint Meeting} and \emph{Metadata for Data Indexing and Discovery in Materials Science}, Research Data Alliance (RDA) 18th Virtual Plenary Meeting}
+\cvitem{}{Invited talk: \emph{The OPTIMADE Ecosystem}, DoE Battery Genome Initiative}
+\cvitem{}{Invited panel discussion: \emph{Delivery platforms for open marketplaces}, Research Data Alliance (RDA) 17th Virtual Plenary Meeting}
 \cvitem{2020}{Invited talk: \emph{The OPTIMADE Specification}, Research Data Alliance (RDA) 16th Virtual Plenary Meeting: Data Infrastructure for Collaborations in Materials Research}
 \cvitem{}{Invited talk and workshop demonstration: \emph{\texttt{odbx \& OPTIMADE}} and \emph{\texttt{optimade-python-tools}}, CECAM Workshop, Open Databases Integration for Materials Design 2020}
 \cvitem{2019}{Contributed talk: \emph{Phosphorus anodes for potassium-ion batteries: insights from crystal structure prediction}, EMRS Spring 2019, Nice, France}
