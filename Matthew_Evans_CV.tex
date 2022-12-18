@@ -7,7 +7,17 @@
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-\definecolor{color2}{RGB}{12, 69, 129}
+\definecolor{niceblue}{RGB}{12, 69, 129}
+\definecolor{mypurple}{RGB}{189,147,249}
+\definecolor{niceyellow}{HTML}{e0af68}
+\definecolor{nicegreen}{HTML}{565f89}
+\colorlet{color1}{mypurple}
+\colorlet{color2}{niceyellow}
+%\definecolor{bg}{HTML}{24283b}
+\definecolor{bg}{HTML}{1a1b26}
+%\definecolor{fg}{RGB}{248,248,242}
+\definecolor{fg}{HTML}{a9b1d6}
+\colorlet{color0}{nicegreen}
 \definecolor{darkgray}{gray}{0.4}
 \usepackage[unicode,pdfencoding=auto]{hyperref}
 %\definecolor{color2}{RGB}{56,115,178}
@@ -49,7 +59,7 @@
 \newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
 
 \newcommand\colourhref[3][color2]{\href{#2}{\color{#1}#3}}
-\newcommand\greencolourhref[3][OliveGreen]{\href{#2}{\color{#1}#3}}
+\newcommand\greencolourhref[3][preprintcolour]{\href{#2}{\color{#1}#3}}
 \newcommand{\doi}[1]{DOI: \,{\colourhref{https://dx.doi.org/#1}{\texttt{#1}}}}
 \newcommand{\eprint}[1]{{\greencolourhref{#1}{\texttt{#1}}}}
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
@@ -80,7 +90,7 @@
 
 % adjust the page margins
 %\usepackage[scale=0.8]{geometry}
-\usepackage[paperheight=35in,margin=1in,scale=0.8]{geometry}
+\usepackage[paperheight=36in,margin=1in,scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{12cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -95,6 +105,8 @@
 \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 
 \begin{document}
+\pagecolor{bg}
+\color{fg}
 %-----       resume       ---------------------------------------------------------
 %\input{cover_letter.tex}
 %\newpage
@@ -106,31 +118,33 @@
 \cventry{2011--2015}{MPhys Physics with Theoretical Physics}{}{University of Manchester}{\textit{First Class (Hons)}}{}
 
 \section{\texttt{EXPERIENCE}}
-\cvitem{2022}{\textbf{Postdoctoral Research Associate}}
-\cvitem{}{\emph{Cambrige Crystallographic Data Centre}}
-\cvitem{}{2-month contract to implement a recommender system for the Cambridge Structural Database.}
+\cvitem{2020--}{\textbf{Researcher} then \textbf{BEWARE Research Fellow} (jointly at \colourhref{https://matgenix.com/}{Matgenix}, 2022 onwards)}
+\cvitem{}{with Prof Gian-Marco Rignanese (\emph{Universit\`{e} catholique de Louvain})}
+\cvitem{}{
+\begin{itemize}
+    \item[--] Machine learning for small materials datasets (MODNet).
+    \item[--] High-throughput workflows for computational materials discovery and molecular dynamics.
+    \item[--] Continued development of the \colourhref{https://optimade.org}{OPTIMADE} API specification and associated software.
+\end{itemize}}
+\vspace{-0.2in}
 \cvitem{2021--}{\textbf{Visiting Researcher}}
 \cvitem{}{in the group of Prof Clare Grey (\emph{University of Cambridge})}
 \cvitem{}{
 \begin{itemize}
     \item[--] Data management, analysis software and open APIs for materials chemistry research.
     \item[--] Funded by BIG-MAP External Stakeholder Initiative to implement functionality for electrochemical cycling, NMR and XRD data management.
+    \item[--] Founded and co-leader of a \colourhref{https://www.marda-alliance.org/}{MaRDA} working group on \colourhref{https://github.com/marda-alliance/metadata_extractors/}{metadata extractors} in materials science and chemistry.
 \end{itemize}}
 \vspace{-0.2in}
-\cvitem{2020--2022}{\textbf{Researcher}}
-\cvitem{}{with Prof Gian-Marco Rignanese (\emph{Universit\`{e} catholique de Louvain})}
-\cvitem{}{
-\begin{itemize}
-    \item[--] Machine learning for small materials datasets (MODNet).
-    \item[--] Continued development of the \colourhref{https://optimade.org}{OPTIMADE} API specification and associated software.
-\end{itemize}}
-\vspace{-0.2in}
+\cvitem{2022}{\textbf{Postdoctoral Research Associate}}
+\cvitem{}{\emph{Cambrige Crystallographic Data Centre}}
+\cvitem{}{2-month contract to implement a recommender system for the Cambridge Structural Database.}
 \cvitem{2016--2020}{\textbf{PhD student: Crystal structure prediction for next-generation energy storage}}
 \cvitem{}{with Dr Andrew Morris \emph{(University of Cambridge/University of Birmingham)}}
 \cvitem{}{\begin{itemize}
     \item[--] Computional materials discovery for conversion anodes for Li, Na and K-ion batteries.
     \item[--] Author of two open-source Python packages: database approaches for high-throughput calculations and materials design with \colourhref{http://matador.science}{\texttt{matador}} and crystal structure prediction with \colourhref{http://ilustrado.readthedocs.io}{\texttt{ilustrado}}.
-    \item[--] Active member of the \colourhref{https://optimade.org}{OPTIMADE consortium} for materials database interoperability and author of the \colourhref{https://github.com/Materials-Consortia/optimade-python-tools}{\texttt{optimade-python-tools}} package and \colourhref{https://odbx.science}{\texttt{odbx}} implementation.
+    \item[--] Active member of the \colourhref{https://optimade.org}{OPTIMADE consortium} for materials database interoperability and author of the \colourhref{https://github.com/Materials-Consortia/optimade-python-tools}{\texttt{optimade-python-tools}} package (used in production by The Materials Project, NOMAD and others) and \colourhref{https://odbx.science}{\texttt{odbx}} implementation.
 \end{itemize}}
 %PhD research undertaken as a member of the EPSRC CDT for Computational Methods in Materials Science.
 \vspace{-0.2in}
@@ -167,8 +181,9 @@
 %\cvdoubleitem{Data viz}{\textbf{matplotlib}, Bokeh, d3.js}{Tools}{\textbf{git}, \textbf{vim}, \textit{Docker}}
 
 \section{\texttt{(TEACHING + SERVICE)}}
+\cvitem{2022--}{Founded and co-lead a \colourhref{https://www.marda-alliance.org/}{MaRDA} working group on \colourhref{https://github.com/marda-alliance/metadata_extractors/}{metadata extractors} for materials science and chemistry}
 \cvitem{2020--}{Co-chair of the Research Data Alliance (RDA) IG \emph{Materials Data, Infrastructure \& Interoperability}}
-\cvitem{2018--}{Reviewed manuscripts for \emph{npj. Computational Materials}, \emph{J. Phys.: Cond. Mat.}, \emph{Scientific Reports} and \emph{Journal of Open Source Software}}
+\cvitem{2018--}{Reviewed manuscripts and data for \emph{npj. Computational Materials}, \emph{J. Phys.: Cond. Mat.}, \emph{Scientific Reports}, \emph{Digital Discovery} and \emph{Journal of Open Source Software}}
 \cvitem{2022}{Organiser for the CECAM Virtual Workshop \emph{Machine-actionable Data Interoperability for Chemical Sciences} (\colourhref{https://madices.github.io/}{MADICES})}
 \cvitem{2021}{Lecturer for ``Working with Materials Databases'' at the ICTP-East African Institute for Fundamental Research Training School \emph{Machine Learning for Electronic Structure and Molecular Dynamics}}
 \cvitem{2021}{Mentor at Acceleration Consortium Hackathon on Scientific Databases}
@@ -225,7 +240,6 @@
 \cvitem{2016}{Poster Presentation: SMARTER5 Conference, University of Bayreuth, Germany}
 %\pagebreak
 \section{\texttt{PUBLICATIONS}}
-Status: {\color{OliveGreen} preprint}, {published}.
 Underline indicates (joint) first authorship.
 %\nocite{*}
 %{\color{darkgray}\printbibliography[heading=none,keyword=inprep]}
