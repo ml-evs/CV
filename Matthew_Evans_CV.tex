@@ -7,7 +7,7 @@
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-\definecolor{niceblue}{RGB}{12, 69, 129}
+\definecolor{niceblue}{RGB}{139, 233, 253}
 \definecolor{mypurple}{RGB}{189,147,249}
 \definecolor{niceyellow}{HTML}{e0af68}
 \definecolor{nicegreen}{HTML}{565f89}
@@ -90,7 +90,7 @@
 
 % adjust the page margins
 %\usepackage[scale=0.8]{geometry}
-\usepackage[paperheight=43in,margin=1in,scale=0.8]{geometry}
+\usepackage[paperheight=44in,margin=1in,scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{12cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -100,7 +100,11 @@
 \email{matthew@ml-evs.science}                               % optional, remove / comment the line if not wanted
 \homepage{ml-evs.science}
 \social[github]{ml-evs}                           % optional, remove / comment the line if not wanted
-\quote{\texttt{materials discovery \textbullet\, ab initio calculations\\ data management and APIs \textbullet\, open science \& software}}
+\quote{
+    {\color{niceblue}I am an open source software developer trying to actualise my vision for the future of decentralized data management in the chemical and materials sciences.}\\[0.2in]
+\texttt{materials discovery \textbullet\, ab initio calculations
+\texttt{decentralized data management}\textbullet\,\texttt{open science \& software}
+}}
 
 \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 
@@ -148,13 +152,13 @@
 \end{itemize}}
 %PhD research undertaken as a member of the EPSRC CDT for Computational Methods in Materials Science.
 \vspace{-0.2in}
-\cvitem{2019}{\textbf{Visiting Researcher}}
-\cvitem{}{\emph{Department of Applied Physics, Aalto University}}
-\cvitem{}{Received HPC-Europa funding to visit the group of Prof Adam Foster for 7 weeks, with computational resources provided by the Finnish IT center for science (CSC).}
+\cvitem{2019}{\textbf{Visiting Researcher: Machine learning for materials discovery}}
+\cvitem{}{with Prof Adam Foster \& Prof Patrick Rinke, \emph{Department of Applied Physics, Aalto University}}
+%\cvitem{}{Received HPC-Europa funding to visit the group of Prof Adam Foster for 7 weeks, with computational resources provided by the Finnish IT center for science (CSC).}
 
 \cvitem{2019}{\textbf{Scientific Software Developer (Intern)}}
 \cvitem{}{\emph{Enthought Inc., Cambridge}}
-\cvitem{}{Worked on the open source, Horizon 2020 \colourhref{https://github.com/force-h2020}{FORCE project}, adding functionality to a workflow manager for multi-criteria optimisations. Helped develop Cython bindings for the ACADO toolkit.}
+%\cvitem{}{Worked on the open source, Horizon 2020 \colourhref{https://github.com/force-h2020}{FORCE project}, adding functionality to a workflow manager for multi-criteria optimisations. Helped develop Cython bindings for the ACADO toolkit.}
 
 %\cvitem{MPhil}{\textbf{High-throughput \emph{ab initio} materials discovery}}
 %\cvitem{2015--2016}{with Dr Andrew Morris \emph{(University of Cambridge)}}
@@ -175,15 +179,15 @@
 \section{\texttt{COMPUTING}}
 %\pagestyle{empty}
 \centering Exposure: \textbf{Daily}, Intermittent, \textit{Occasional}.\\[0.2em]
-\cvdoubleitem{Languages}{\textbf{Python}, Javascript, Vue.js, Fortran, Cython, C++}{Expertise}{Web APIs \& databases, HT workflows, ML}
+\cvdoubleitem{Languages}{\textbf{Python}, Javascript, Vue.js, Fortran, Cython, C++}{Expertise}{Web APIs \& databases, HT workflows, ML, Cloud Automation}
 \cvdoubleitem{DFT}{\textbf{CASTEP}, Quantum Espresso, \emph{GPAW}}{Stack}{FastAPI, pydantic, Flask, Tensorflow}
-\cvdoubleitem{Tools}{\textbf{git}, \textbf{vim}, \textbf{Docker}}{Practices}{\textbf{Test-driven development, CI}}
+\cvdoubleitem{Tools}{\textbf{git}, \textbf{vim}, \textbf{Docker}, \textbf{Ansible}, \textbf{Terraform}}{Practices}{\textbf{Test-driven development, CI/CD}}
 %\cvdoubleitem{Data viz}{\textbf{matplotlib}, Bokeh, d3.js}{Tools}{\textbf{git}, \textbf{vim}, \textit{Docker}}
 
 \section{\texttt{(TEACHING + SERVICE)}}
 \cvitem{2022--}{Founded and co-lead a \colourhref{https://www.marda-alliance.org/}{MaRDA} working group on \colourhref{https://github.com/marda-alliance/metadata_extractors/}{metadata extractors} for materials science and chemistry}
 \cvitem{2020--}{Co-chair of the Research Data Alliance (RDA) IG \emph{Materials Data, Infrastructure \& Interoperability}}
-\cvitem{2018--}{Reviewed manuscripts and data for \emph{npj. Computational Materials} (x2), \emph{Scientific Data} (x1), \emph{J. Phys.: Cond. Mat.} (x2), \emph{Scientific Reports} (x1), \emph{Digital Discovery} (x2) and \emph{Journal of Open Source Software} (x4)}
+\cvitem{2018--}{Reviewed manuscripts and data for \emph{npj. Computational Materials} (x2), \emph{Scientific Data} (x1), \emph{J. Phys.: Cond. Mat.} (x3), \emph{Scientific Reports} (x1), \emph{Digital Discovery} (x3) and \emph{Journal of Open Source Software} (x4)}
 \cvitem{2022}{Organiser for the CECAM Virtual Workshop \emph{Machine-actionable Data Interoperability for Chemical Sciences} (\colourhref{https://madices.github.io/}{MADICES})}
 \cvitem{2021}{Lecturer for ``Working with Materials Databases'' at the ICTP-East African Institute for Fundamental Research Training School \emph{Machine Learning for Electronic Structure and Molecular Dynamics}}
 \cvitem{2021}{Mentor at Acceleration Consortium Hackathon on Scientific Databases}
