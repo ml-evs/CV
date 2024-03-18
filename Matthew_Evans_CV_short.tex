@@ -57,8 +57,8 @@
 % Reverse numbering in publications list
 \newcounter{entrycount}
 \AtDataInput{\stepcounter{entrycount}}
-%\DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
-%\newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
+\DeclareFieldFormat{labelnumber}{\mkrevbibnum{#1}}
+\newcommand{\mkrevbibnum}[1]{\number\numexpr\value{entrycount}+1-#1}
 
 \newcommand{\colourhref}[2]{\setulcolor{red}\href{#1}{\underline{#2}}}
 \newcommand{\greencolourhref}[3][preprintcolour]{\href{#2}{\color{#1}#3}}
