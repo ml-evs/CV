@@ -20,6 +20,7 @@
 %\definecolor{fg}{RGB}{248,248,242}
 \definecolor{fg}{HTML}{a9b1d6}
 \colorlet{color0}{nicegreen}
+\colorlet{preprintcolour}{nicegreen}
 \definecolor{darkgray}{gray}{0.4}
 \usepackage[unicode,pdfencoding=auto]{hyperref}
 %\definecolor{color2}{RGB}{56,115,178}
@@ -63,7 +64,7 @@
 \newcommand{\colourhref}[2]{\setulcolor{red}\href{#1}{\underline{#2}}}
 \newcommand{\greencolourhref}[3][preprintcolour]{\href{#2}{\color{#1}#3}}
 \newcommand{\doi}[1]{{\href{https://doi.org/#1}{{#1}}}}
-\newcommand{\eprint}[1]{{\greencolourhref{#1}{{#1}}}}
+\newcommand{\eprint}[1]{{\greencolourhref{https://doi.org/#1}{{#1}}}}
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -139,8 +140,8 @@
 \cvitem{}{University of Cambridge, with Prof Clare Grey FRS}
 \cvitem{}{
 \begin{itemize}
-    \item[--] Funded by BIG-MAP External Stakeholder Initiative to develop \colourhref{https://github.com/the-grey-group/datalab}{\texttt{datalab}}, a data management platform for tracking samples, devices and associated characterisation.
-    \item[--] Founder and co-leader of a \colourhref{https://www.marda-alliance.org/}{MaRDA} working group on interoperable \colourhref{https://github.com/marda-alliance/metadata_extractors/}{metadata extractors} in materials science and chemistry.
+    \item[--] Leading development of \colourhref{https://github.com/the-grey-group/datalab}{\texttt{datalab}}, a data management API and web UI for samples and associated characterisation via electrochemical cycling, NMR, XRD, etc, deployed at several labs internationally.
+    \item[--] Founder and co-leader of a \colourhref{https://www.marda-alliance.org/}{MaRDA} working group on interoperable \colourhref{https://github.com/marda-alliance/metadata_extractors/}{metadata extractors} in chemistry.
 \end{itemize}}
 \vspace{-0.2in}
 \cvitem{2016--2020}{\textbf{PhD student: Crystal structure prediction for next-generation energy storage}}
@@ -191,7 +192,7 @@
 \section{\texttt{SELECTED (TEACHING + SERVICE)}}
 \cvitem{2022--}{Proposed and co-lead a \colourhref{https://www.marda-alliance.org/}{MaRDA} working group on \colourhref{https://github.com/marda-alliance/metadata_extractors}{metadata extractors} for materials science.}
 %\cvitem{2020--}{Co-chair of the Research Data Alliance (RDA) IG \emph{Materials Data, Infrastructure \& Interoperability}}
-\cvitem{2018--}{Reviewed manuscripts and data for \emph{npj. Comp. Mater.} (x1), \emph{Sci Data} (x1), \emph{J. Phys.: Cond. Mat.} (x4), \emph{Scientific Reports} (x1), \emph{Digital Discovery} (x4), \emph{Machine Learning: Science \& Technology} (x1), and \emph{Journal of Open Source Software} (x5)}
+\cvitem{2018--}{Reviewed manuscripts and data for \emph{npj. Comp. Mater.} (x1), \emph{Sci Data} (x1), \emph{J. Phys.: Cond. Mat.} (x4), \emph{Scientific Reports} (x1), \emph{Digital Discovery} (x4), \emph{Machine Learning: Science \& Technology} (x2), and \emph{Journal of Open Source Software} (x5)}
 \cvitem{2022--}{Organiser of the CECAM Workshop series \emph{Machine-actionable Data Interoperability for Chemical Sciences} (\colourhref{https://madices.github.io/}{MADICES}, February 2022 and April 2024)}
 %\cvitem{2021}{Lecturer for ``Working with Materials Databases'' at the ICTP-East African Institute for Fundamental Research Training School \emph{Machine Learning for Electronic Structure and Molecular Dynamics}}
 %\cvitem{2021}{Mentor at Acceleration Consortium Hackathon on Scientific Databases}
