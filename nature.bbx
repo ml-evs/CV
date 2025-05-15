@@ -63,7 +63,7 @@
 % Custom field formats
 \DeclareFieldFormat*{booktitle}{\mkbibemph{#1}\nopunct}
 \DeclareFieldFormat{doi}{%
-  DOI\addcolon
+  % DOI\addcolon
   \ifhyperref
     {\colourhref{http://dx.doi.org/#1}{\nolinkurl{#1}}}
     {\nolinkurl{#1}}%
