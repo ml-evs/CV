@@ -15,4 +15,4 @@ short: Matthew_Evans_CV_short.tex
 	xelatex Matthew_Evans_CV_short.tex
 
 docker: Matthew_Evans_CV_short.tex
-	docker run --rm --volume `pwd`:/data ghcr.io/ml-evs/cv:latest
+	docker run --volume `pwd`:/data ghcr.io/ml-evs/cv:latest
